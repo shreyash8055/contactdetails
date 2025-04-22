@@ -1,0 +1,17 @@
+# Ignore Python cache and environment
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+.env
+myenv/
+*.log
+
+# Ignore Docker/Nginx/Ngrok stuff (optional)
+ngrok-v3-stable-windows-amd64/
+*.pid
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
