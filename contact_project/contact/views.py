@@ -7,15 +7,15 @@ from .forms import ContactForm
 def contact_view(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
-        
         if form.is_valid():
             contact = form.save()
 
             email = EmailMessage(
                 subject=f"New Contact Form Submission from {contact.name}",
                 body=f"Message:\n{contact.message}\n\nReply to: {contact.email}",
-                from_email=settings.EMAIL_HOST_USER,  
-                to=['shreyash1833@gmail.com','shreyash.sunware02@gmail.com'],        
+                from_email=settings.EMAIL_HOST_USER,  # must match Mailtrap config
+                to=['shreyash1833@gmail.com','amrendra.sunware03@gmail.com'],         # where you want to receive mail
+                # reply_to=[settings.EMAIL_HOST_USER]            # allows you to reply directly to user
             )
             email.send(fail_silently=False)
 
@@ -25,6 +25,3 @@ def contact_view(request):
         form = ContactForm()
 
     return render(request, 'contact/contact_form.html', {'form': form})
-
-
-# This view handles the contact form submission, validates the form,
