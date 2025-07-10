@@ -30,4 +30,4 @@ def contact_view(request):
 # This view handles the contact form submission, validates the form,
 # and sends an email with the contact details.
 # hello this is a test code  --- IGNORE ---
-# - --- IGNORE ---
+# - --- IGno
