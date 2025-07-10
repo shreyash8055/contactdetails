@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-3h1_vnv4$w)c1%js$8at_din(_h5ofdfz@_7g3ie2lm9(m^9vq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+
 
 
 # Application definition
@@ -121,8 +122,9 @@ STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
-# RESEND_API_KEY = 're_VxKeVZ8c_HfUQyfaEGJ8CeBdLwjDUbnJD'
-
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.ngrok-free.app'
+]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
@@ -131,9 +133,24 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-# EMAIL_HOST_USER =''
 EMAIL_HOST_USER = 'shreyash.sunware02@gmail.com'
 EMAIL_HOST_PASSWORD = 'gqoyczoevitzfylw'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # ADMIN_EMAIL = 'shreyash.sunware02@gmail.com'
 # ADMIN_EMAIL = 'shreyash1833@gmail.com'
 

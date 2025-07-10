@@ -11,6 +11,18 @@ class Contact(models.Model):
 
     def __str__(self):
         return f"Message from {self.name} ({self.email})"
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     # class Meta:
     #     db_table = 'my_custom_table_name'
 
